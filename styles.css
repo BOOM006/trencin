@@ -1,0 +1,211 @@
+:root {
+  /*COLORS*/
+  --HEADER-BGCOLOR: #333;
+  --HEADER-COLOR: whitesmoke;
+  --GRADIENT-COLOR: rgb(246, 217, 217);
+  --BGCOLOR: #e59885;
+  --TABLE-BGCOLOR: rgba(255, 255, 255, 0.711);
+  --SECOND-BGCOLOR: rgba(255, 255, 255, 0.444);
+  --FOOTER-BGCOLOR: rgb(194, 186, 186);
+
+  /*FONTS*/
+  --FF: "Times New Roman";
+  --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
+  --FS-H2: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h2*/
+  --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(169, 218, 231);
+}
+
+header img {
+  width: 300px;
+  padding: 0.5rem;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  text-align: center;
+  background-color: rgb(169, 218, 231);
+}
+
+main img {
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--FS-H1);
+}
+
+h2 {
+  font-size: var(--FS-H2);
+}
+
+.nav nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding: 3rem;
+  font-size: var(--FS-TEXT-NAV);
+  text-decoration: none;
+}
+
+.nav img {
+  width: 250px;
+  height: 250px;
+}
+
+.item{
+  width: 25%;
+}
+
+.item :hover {
+  background-color: blue;
+}
+
+.uvod-container img {
+  width: 100%;
+}
+
+.newsletter-social-container {
+  background-image: url("obrazky/newsletter.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+}
+
+.newsletter {
+  width: 30%;
+  min-height: auto;
+  display: flex;
+  justify-items: left;
+  flex-direction: column;
+  color: white;
+  font-size: var(--FS-TEXT);
+}
+
+.newsletter h4 {
+  margin: 0;
+}
+
+.mail-btn-container {
+  margin: 0.6rem 0;
+}
+
+input,
+button {
+  padding: 0.8rem;
+  font-size: medium;
+  border-radius: 3rem;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(87, 151, 248);
+}
+
+.social {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 15px;
+  font-size: var(--FS-TEXT);
+  text-decoration: none;
+  color: white;
+}
+
+.social img {
+  width: 50px;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    width: 98%;
+  }
+
+  .nav nav {
+    flex-direction: column;
+  }
+
+  .nav a {
+    justify-self: center;
+  }
+
+  .item :hover {
+    background-color: none;
+  }
+
+  #one {
+    background-color: hsla(50, 87%, 56%, 0.74);
+  }
+
+  #two {
+    background-color: hsla(120, 81%, 62%, 0.504);
+  }
+
+  #four {
+    background-color: hsla(0, 88%, 55%, 0.499);
+  }
+
+  #three {
+    background-color: rgba(27, 27, 231, 0.501);
+  }
+
+  .item {
+    margin: auto;
+    width: 100%;
+  }
+
+  .newsletter-social-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .newsletter {
+    margin: auto;
+    width: 95%;
+    justify-content: center;
+  }
+
+  button {
+    margin-top: 0.5rem;
+  }
+
+  .social {
+    margin: auto;
+    width: 95%;
+    justify-content: center;
+  }
+}
