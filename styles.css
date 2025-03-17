@@ -25,7 +25,7 @@ header {
 }
 
 header img {
-  width: 300px;
+  width: 170px;
   padding: 0.5rem;
 }
 
@@ -61,6 +61,7 @@ h2 {
   justify-self: center;
   padding: 3rem;
   font-size: var(--FS-TEXT-NAV);
+  color: black;
   text-decoration: none;
 }
 
@@ -74,7 +75,11 @@ h2 {
 }
 
 .item :hover {
+  transform: translateY(-5px);
   background-color: blue;
+  color: white;
+  transition: all 0.3s ease;
+
 }
 
 .uvod-container img {
