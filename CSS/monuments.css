@@ -42,6 +42,7 @@ h1 {
 }
 
 h2 {
+  margin-top: 0;
   font-size: var(--FS-H2);
   text-align: center;
 }
@@ -79,55 +80,14 @@ main img {
   margin-left: 0.5rem;
 }
 
-.general {
+.pamiatka {
   display: flex;
-  justify-content: center;
-  margin: auto;
-  gap: 4rem;
-  width: 80%;
-  text-align: center;
+  background-color: var(--SECOND-BGCOLOR);
+  width: 70%;
+  margin: 1rem auto;
+  padding: 1rem;
 }
 
-.general li {
-  text-align: left;
-}
-
-.history {
-  display: flex;
-  justify-self: center;
-  flex-direction: column;
-  width: 80%;
-}
-
-.symbols-container {
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-  width: 80%;
-}
-
-.symbol {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  height: 300px;
-}
-
-.symbol img {
-  margin: auto;
-  width: 150px;
-}
-
-.partners {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  gap: 4rem;
-  width: 80%;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
+.pamiatka img {
+  width: 450px;
 }

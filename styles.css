@@ -9,7 +9,7 @@
   --FOOTER-BGCOLOR: rgb(194, 186, 186);
 
   /*FONTS*/
-  --FF: "Times New Roman";
+  --FF: "Roboto, Lato";
   --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
   --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
