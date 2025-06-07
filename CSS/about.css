@@ -21,7 +21,7 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: rgb(169, 218, 231);
+  background-color: hsla(0, 3%, 85%, 0.4);
 }
 
 header img {
@@ -31,11 +31,13 @@ header img {
 
 body {
   margin: 0;
+  background-image: url(/obrazky/about-bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
   font-size: var(--FS-H1);
-  background-color: var(--SECOND-BGCOLOR);
   text-align: center;
   margin: 0;
   padding: 1rem;
@@ -44,6 +46,8 @@ h1 {
 h2 {
   font-size: var(--FS-H2);
   text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -63,6 +67,10 @@ span {
   font-weight: bold;
 }
 
+main {
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
 main img {
   width: 100%;
 }
@@ -71,7 +79,6 @@ main img {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: var(--SECOND-BGCOLOR);
 }
 
 #no-margin {
@@ -79,13 +86,18 @@ main img {
   margin-left: 0.5rem;
 }
 
+.general-section {
+  margin: auto;
+  width: 65%;
+  border-radius: 2rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  padding: 2rem;
+}
+
 .general {
   display: flex;
   justify-content: center;
-  margin: auto;
   gap: 4rem;
-  width: 80%;
-  text-align: center;
 }
 
 .general li {
@@ -99,11 +111,19 @@ main img {
   width: 80%;
 }
 
+.symbols-section {
+  margin: 1rem auto;
+  width: 65%;
+  border-radius: 2rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  padding: 2rem;
+}
+
 .symbols-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: auto;
-  width: 80%;
+  gap: 4rem;
 }
 
 .symbol {
@@ -119,6 +139,46 @@ main img {
   width: 150px;
 }
 
+.persons-section {
+  margin: 1rem auto;
+  width: 65%;
+  border-radius: 2rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  padding: 2rem;
+}
+
+.persons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  margin: auto;
+  gap: 0.5rem;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 300px;
+  border-radius: 2rem;
+}
+
+.person img {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 2rem;
+  border: 2px solid black;
+}
+
+.partners-section {
+  margin: 0 auto;
+  width: 65%;
+  border-radius: 2rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  padding: 2rem;
+}
+
 .partners {
   display: flex;
   justify-content: center;
@@ -130,4 +190,10 @@ main img {
 
 footer {
   text-align: center;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
 }

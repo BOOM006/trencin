@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="icon" href="/obrazky/icon.png">
+    <link rel="icon" href="/obrazky/icon.png" />
     <title>Mesto Trenčín</title>
   </head>
   <body>
@@ -18,16 +18,48 @@
     </header>
 
     <main>
-      <img src="/obrazky/TN1.jpg" alt="" />
+      <!--  <img src="/obrazky/TN1.jpg" alt="" />-->
       <h1>Mesto histórie, kultúry, módy a pohody</h1>
       <div class="nav">
         <nav>
-          <div class="item" id="one"><a href="/HTML/about.html"><img id="myImage" src="/obrazky/city.png" alt="">O meste</a></div>
-          <div class="item" id="two"><a href="/HTML/monuments.html"><img src="/obrazky/sightseeing.jpg" alt="">Pamiatky</a></div>
-          <div class="item" id="three"><a href=""><img src="/obrazky/cityhall.png" alt=""> Samospráva</a></div>
-          <div class="item" id="four"><a href=""><img src="/obrazky/tourism.png" alt=""> Turizmus a kultúra</a></div>
+          <div class="item" id="one">
+            <a href="/HTML/about.html"
+              ><img id="myImage" src="/obrazky/city_black.png" alt="" />O
+              meste</a
+            >
+          </div>
+
+       <div class="item" id="three">
+            <a href="/HTML/government.html"
+              ><img src="/obrazky/cityhall_black.png" alt="" /> Samospráva</a
+            >
+          </div>
+
+          <div class="item" id="two">
+            <a href="/HTML/monuments.html"
+              ><img src="/obrazky/sightseeing_black.png" alt="" />Pamiatky</a
+            >
+          </div>
+   
+          <div class="item" id="four">
+            <a href=""
+              ><img src="/obrazky/tourism_black.png" alt="" /> Turizmus a
+              kultúra</a
+            >
+          </div>
         </nav>
       </div>
+
+      <section id="aktuality">
+        <h2>Aktuality</h2>
+        <ul id="rss-list"></ul>
+        <div class="aktuality-button">
+          <a href="https://trencin.sk/aktuality/" target="_blank"
+            >Zobraziť všetky aktuality</a
+          >
+        </div>
+      </section>
+
       <div class="newsletter-social-container">
         <div class="newsletter">
           <h2>Odber newsletteru</h2>

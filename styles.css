@@ -12,6 +12,7 @@
   --FF: "Roboto, Lato";
   --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-TEXT-NEWS: clamp(1rem, 1.6vw, 5rem);
   --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
   --FS-H2: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
@@ -21,21 +22,25 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: rgb(169, 218, 231);
+  background-color: hsla(0, 3%, 85%, 0.4);
+  /* background-color: rgb(169, 218, 231);*/
 }
 
 header img {
   width: 170px;
-  padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 body {
   margin: 0;
+  background-image: url(/obrazky/city\ –\ kópia.jpg);
 }
 
 main {
   text-align: center;
-  background-color: rgb(169, 218, 231);
+  background-color: hsla(0, 3%, 85%, 0.4);
+  padding-bottom: 2rem;
+  /*background-color: rgb(169, 218, 231);*/
 }
 
 main img {
@@ -44,42 +49,58 @@ main img {
 
 h1 {
   font-size: var(--FS-H1);
+  padding: 0.8rem;
+  margin: 0;
 }
 
 h2 {
   font-size: var(--FS-H2);
 }
 
+.nav {
+}
+
 .nav nav {
   display: flex;
   justify-content: center;
+  gap: 1rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .nav a {
   display: flex;
   flex-direction: column;
   justify-self: center;
-  padding: 3rem;
+  padding: 1rem;
   font-size: var(--FS-TEXT-NAV);
   color: black;
   text-decoration: none;
 }
 
 .nav img {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
-.item{
+.item {
   width: 25%;
+  backdrop-filter: blur(5px);
+  /*background-color: hsla(193, 56%, 78%, 0.388);*/
+  background-color: hsla(0, 0%, 100%, 0.6);
+
+  border-radius: 2rem;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  background-color: hsla(193, 56%, 78%, 1);
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
 }
 
 .item :hover {
-  transform: translateY(-5px);
-  background-color: blue;
   color: white;
-  transition: all 0.3s ease;
-
 }
 
 .uvod-container img {
@@ -87,14 +108,20 @@ h2 {
 }
 
 .newsletter-social-container {
-  background-image: url("obrazky/newsletter.jpg");
-  background-position: center;
+  /* background-image: url("obrazky/newsletter.jpg");  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  background-color: hsla(0, 0%, 100%, 0.304);
+*/
+  backdrop-filter: blur(5px);
+  background-color: hsla(0, 0%, 100%, 0.6);
   min-height: 300px;
+  width: 80%;
   display: flex;
   justify-content: center;
+  margin: auto;
   gap: 20rem;
+  border-radius: 2rem;
 }
 
 .newsletter {
@@ -103,7 +130,8 @@ h2 {
   display: flex;
   justify-items: left;
   flex-direction: column;
-  color: white;
+  color: black;
+
   font-size: var(--FS-TEXT);
 }
 
@@ -132,7 +160,7 @@ button {
   width: 30%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: black;
 }
 
 .social a {
@@ -144,7 +172,7 @@ button {
   margin-bottom: 15px;
   font-size: var(--FS-TEXT);
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .social img {
@@ -153,6 +181,78 @@ button {
 
 footer {
   text-align: center;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+  font-size: var(--FS-TEXT-NEWS);
+}
+
+#aktuality {
+  border-radius: 16px;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 2.5rem;
+  /*box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(4px);  ak máš hrad ako background */
+}
+
+#rss-list {
+  list-style: none;
+  padding: 0;
+}
+
+#rss-list li {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  background-color: hsla(0, 0%, 100%, 0.6);
+  border-left: 6px solid rgb(87, 151, 248);
+  border-radius: 1rem;
+}
+
+#rss-list li strong {
+  font-size: var(--FS-TEXT-NEWS);
+}
+
+#rss-list li:hover {
+  background-color: hsla(193, 56%, 78%, 1);
+}
+
+#rss-list a {
+  font-size: var(--FS-TEXT-NEWS);
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+#rss-list a:hover {
+  text-decoration: underline;
+  color: #d40000;
+}
+
+.aktuality-button {
+  display: inline-block;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.aktuality-button a {
+  text-decoration: none;
+  background-color: rgb(87, 151, 248);;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.aktuality-button a:hover {
+  background-color: blue;
+  color: white;
 }
 
 @media (max-width: 768px) {
