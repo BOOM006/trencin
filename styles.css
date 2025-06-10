@@ -257,40 +257,29 @@ footer p {
 
 @media (max-width: 768px) {
   h1 {
-    width: 98%;
+    padding: 0;
+    width: 90%;
+    margin: auto;
   }
 
   .nav nav {
     flex-direction: column;
   }
 
-  .nav a {
-    justify-self: center;
-  }
-
-  .item :hover {
-    background-color: none;
-  }
-
- /* #one {
-    background-color: hsla(50, 87%, 56%, 0.74);
-  }
-
-  #two {
-    background-color: hsla(120, 81%, 62%, 0.504);
-  }
-
-  #four {
-    background-color: hsla(0, 88%, 55%, 0.499);
-  }
-
-  #three {
-    background-color: rgba(27, 27, 231, 0.501);
-  }*/
-
   .item {
     margin: auto;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .newsletter-social-container {
@@ -298,7 +287,8 @@ footer p {
     gap: 1rem;
   }
 
-  .newsletter {
+  .newsletter,
+  .social {
     margin: auto;
     width: 95%;
     justify-content: center;
@@ -308,9 +298,8 @@ footer p {
     margin-top: 0.5rem;
   }
 
-  .social {
-    margin: auto;
-    width: 95%;
-    justify-content: center;
+  #aktuality {
+    max-width: 95%;
   }
 }
+
