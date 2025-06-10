@@ -12,9 +12,11 @@
   --FF: "Roboto, Lato";
   --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-TEXT-TABLE: clamp(1rem, 2vw, 6rem); /*Texty - a, p*/
   --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
   --FS-H2: clamp(1.6rem, 2.3vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
+  --FS-H4: clamp(1.3rem, 2vw, 5rem); /*Nadpis h4*/
 }
 
 header {
@@ -30,6 +32,7 @@ header img {
 }
 
 body {
+  width: 100%;
   margin: 0;
   background-image: url(/obrazky/samospráva-bcg.jpg);
   background-repeat: no-repeat;
@@ -40,6 +43,8 @@ h1 {
   font-size: var(--FS-H1);
   text-align: center;
   margin: 0;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 h2 {
@@ -51,15 +56,42 @@ h2 {
 
 h3 {
   font-size: var(--FS-H3);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--FS-H4);
+  margin-bottom: 1rem;
 }
 
 p,
 a,
-li {
+li,
+input,
+label {
   font-size: var(--FS-TEXT);
   font-family: var(--FF);
   text-decoration: none;
   color: black;
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  font-size: var(--FS-TEXT);
+  margin: auto;
+  width: 80%;
+  resize: none;
+}
+
+button {
+  font-size: var(--FS-TEXT);
+  cursor: pointer;
+  background-color: rgb(87, 151, 248);
+  border-radius: 2rem;
+  border: none;
 }
 
 span {
@@ -74,19 +106,70 @@ main img {
   width: 100%;
 }
 
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#no-margin {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
 .cityhall-section {
   background-color: hsla(0, 0%, 100%, 0.8);
   width: 80%;
   margin: auto;
+  margin-bottom: 1rem;
   border-radius: 2rem;
+  padding-bottom: 2rem;
 }
 
 .cityhall-container {
   display: flex;
 }
 
-.cityhall-container img {
-  width: 500px;
+.left {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 35%;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 35%;
+}
+
+.middle img {
+  display: flex;
+  margin: auto;
+  border-radius: 3rem;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+}
+
+table {
+  font-size: var(--FS-TEXT);
+  width: 90%;
+  margin: auto;
+}
+
+.blue,
+th,
+caption {
+  background-color: rgb(87, 151, 248);
+  border: 2px solid rgb(87, 151, 248);
 }
 
 .major {
@@ -109,17 +192,35 @@ main img {
 }
 
 .photo-of-major img {
-  display: flex;
+  width: 90%;
   margin: auto;
-  width: 300px;
-  border-radius: 3rem;
+  border-radius: 2rem;
 }
 
 .info-of-major {
   width: 70%;
 }
 
-.deputy-majors {
+.info-of-major button,
+.hidden button {
+  display: flex;
+  margin: auto;
+  margin-top: 0.5rem;
+  background-color: transparent;
+  color: rgb(23, 102, 221);
+}
+
+.info-of-major button:hover,
+.hidden button:hover {
+  text-decoration: underline;
+  color: rgb(87, 151, 248);
+}
+
+.hidden {
+  display: none;
+}
+
+.deputy-majors-section {
   display: flex;
   flex-direction: column;
   background-color: hsla(0, 0%, 100%, 0.8);
@@ -139,3 +240,148 @@ main img {
   width: 150px;
   margin: 1rem auto;
 }
+
+.city-districts-section {
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 2rem;
+}
+
+.city-districts-container {
+  display: flex;
+  margin: auto;
+  gap: 3rem;
+}
+
+.split-north,
+.split-west {
+  display: flex;
+  gap: 3rem;
+}
+
+#center {
+  text-align: center;
+}
+
+.suggestions-questions-section {
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  width: 80%;
+  margin: 1rem auto;
+  padding-bottom: 1rem;
+  border-radius: 2rem;
+}
+
+.citizen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  padding: 1rem 2rem;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item input,
+textarea {
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.suggestion {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.submit-btn button {
+  padding: 1.2rem;
+}
+
+/*@media (max-width: 768px) {
+  .cityhall-section {
+    width: 90%;
+  }
+
+  .major {
+    width: 90%;
+  }
+  .deputy-majors-section {
+    width: 90%;
+  }
+  .city-districts-section {
+    width: 90%;
+  }
+
+  .city-districts-container {
+    gap: 0;
+  }
+  .suggestions-questions-section {
+    width: 90%;
+  }
+}
+*/
+
+@media (max-width: 768px) {
+  .cityhall-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cityhall-container .left,
+  .cityhall-container .middle,
+  .cityhall-container .right {
+    width: 90%;
+  }
+
+  .major-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-of-major img {
+    max-width: 200px;
+  }
+
+  .deputy-majors-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .split-north,
+  .split-west {
+    flex-direction: column;
+  }
+
+  .citizen {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-item input {
+    width: 100%;
+  }
+
+  .suggestion textarea {
+    width: 100%;
+  }
+}
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Najbližšie podujatia v Trenčíne</title>
+    <style>
+      .event {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+      .event h2 {
+        margin: 0;
+      }
+      .date,
+      .location {
+        font-size: 0.9em;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Najbližšie podujatia v Trenčíne</h1>
+    <div id="events">Načítavam...</div>
+
+    <script>
+      fetch("http://localhost:3000/api/events")
+        .then((res) => res.json())
+        .then((data) => {
+          const list = document.getElementById("events-list");
+          data.forEach((event) => {
+            const li = document.createElement("li");
+            li.textContent = event.name || event.title || "Neznáme podujatie";
+            list.appendChild(li);
+          });
+        })
+        .catch((err) => console.error("Chyba:", err));
+    </script>
+  </body>
+</html>

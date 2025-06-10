@@ -12,16 +12,18 @@
   --FF: "Roboto, Lato";
   --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-TEXT-TABLE: clamp(1rem, 2vw, 6rem); /*Texty - table*/
   --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
   --FS-H2: clamp(1.6rem, 2.3vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
+  --FS-H4: clamp(1.3rem, 2vw, 5rem); /*Nadpis h4*/
 }
 
 header {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: rgb(169, 218, 231);
+  background-color: hsla(0, 3%, 85%, 0.4);
 }
 
 header img {
@@ -31,37 +33,72 @@ header img {
 
 body {
   margin: 0;
+  background-image: url(/obrazky/samospráva-bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
   font-size: var(--FS-H1);
-  background-color: var(--SECOND-BGCOLOR);
   text-align: center;
   margin: 0;
-  padding: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 h2 {
-  margin-top: 0;
   font-size: var(--FS-H2);
   text-align: center;
+  margin: 0;
+  margin-top: 1rem;
 }
 
 h3 {
   font-size: var(--FS-H3);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--FS-H4);
+  margin-bottom: 1rem;
 }
 
 p,
 a,
-li {
+li,
+input,
+label {
   font-size: var(--FS-TEXT);
   font-family: var(--FF);
   text-decoration: none;
   color: black;
 }
 
+ul {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  font-size: var(--FS-TEXT);
+  margin: auto;
+  width: 80%;
+  resize: none;
+}
+
+button {
+  font-size: var(--FS-TEXT);
+  cursor: pointer;
+  background-color: rgb(87, 151, 248);
+  border-radius: 2rem;
+  border: none;
+}
+
 span {
   font-weight: bold;
+}
+
+main {
+  background-color: hsla(0, 3%, 85%, 0.4);
 }
 
 main img {
@@ -72,7 +109,6 @@ main img {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: var(--SECOND-BGCOLOR);
 }
 
 #no-margin {
@@ -82,12 +118,38 @@ main img {
 
 .pamiatka {
   display: flex;
-  background-color: var(--SECOND-BGCOLOR);
-  width: 70%;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  width: 80%;
+  gap: 5rem;
   margin: 1rem auto;
   padding: 1rem;
+  border-radius: 2rem;
 }
 
 .pamiatka img {
-  width: 450px;
+  width: 400px;
+  border-radius: 1.5rem;
+}
+
+.left {
+  width: 55%;
+}
+
+.right {
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .pamiatka {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .left,
+  .right {
+    margin: auto;
+    width: 90%;
+  }
+
+  .right img {
+width: 100%;  }
 }

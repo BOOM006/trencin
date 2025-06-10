@@ -120,7 +120,7 @@ h2 {
   display: flex;
   justify-content: center;
   margin: auto;
-  gap: 20rem;
+  gap: 10rem;
   border-radius: 2rem;
 }
 
@@ -231,7 +231,7 @@ footer p {
 
 #rss-list a:hover {
   text-decoration: underline;
-  color: #d40000;
+  color: blue;
 }
 
 .aktuality-button {
@@ -242,7 +242,7 @@ footer p {
 
 .aktuality-button a {
   text-decoration: none;
-  background-color: rgb(87, 151, 248);;
+  background-color: rgb(87, 151, 248);
   color: black;
   padding: 12px 24px;
   border-radius: 8px;
@@ -272,7 +272,7 @@ footer p {
     background-color: none;
   }
 
-  #one {
+ /* #one {
     background-color: hsla(50, 87%, 56%, 0.74);
   }
 
@@ -286,7 +286,7 @@ footer p {
 
   #three {
     background-color: rgba(27, 27, 231, 0.501);
-  }
+  }*/
 
   .item {
     margin: auto;

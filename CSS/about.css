@@ -139,6 +139,15 @@ main img {
   width: 150px;
 }
 
+.audio {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.audio p {
+  margin: 0.2rem;
+}
+
 .persons-section {
   margin: 1rem auto;
   width: 65%;
@@ -196,4 +205,86 @@ footer {
 footer p {
   margin: 0;
   padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .symbols-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .general-section {
+  }
+
+  .general {
+    justify-self: center;
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .symbols-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .symbol {
+    height: auto;
+  }
+
+  .symbol img {
+    margin: 0 auto;
+  }
+
+  .persons-container {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+
+@media (max-width: 426px) {
+  .persons-container {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+
+  .person {
+    justify-content: unset;
+  }
+
+  .person img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 376px) {
+  body,
+  header,
+  footer {
+    width: 100%;
+  }
+  .general-section {
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .symbols-section {
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .persons-section {
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .persons-container {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+
+  .person {
+    justify-content: unset;
+  }
+
+  .person img {
+    margin: 0 auto;
+  }
 }

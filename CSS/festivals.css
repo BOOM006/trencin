@@ -1,0 +1,112 @@
+:root {
+  /*COLORS*/
+  --HEADER-BGCOLOR: #333;
+  --HEADER-COLOR: whitesmoke;
+  --GRADIENT-COLOR: rgb(246, 217, 217);
+  --BGCOLOR: #e59885;
+  --TABLE-BGCOLOR: rgba(255, 255, 255, 0.711);
+  --SECOND-BGCOLOR: hsla(0, 0%, 50%, 0.316);
+  --FOOTER-BGCOLOR: rgb(194, 186, 186);
+
+  /*FONTS*/
+  --FF: "Roboto, Lato";
+  --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
+  --FS-H2: clamp(1.6rem, 2.3vw, 6rem); /*Nadpis h2*/
+  --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+header img {
+  width: 170px;
+  padding: 0.5rem;
+}
+
+body {
+  margin: 0;
+  background-image: url(/obrazky/about-bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: var(--FS-H1);
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: var(--FS-H2);
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--FS-H3);
+}
+
+p,
+a,
+li {
+  font-size: var(--FS-TEXT);
+  font-family: var(--FF);
+  text-decoration: none;
+  color: black;
+}
+
+span {
+  font-weight: bold;
+}
+
+main {
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+main img {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#no-margin {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  gap: 2rem;
+  width: 70%;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-radius: 2rem;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+}
+
+.image img {
+  width: 200px;
+}
+
+.info,
+.price {
+    width: 30%;
+  margin-top: 4rem;
+}
