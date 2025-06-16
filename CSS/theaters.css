@@ -87,7 +87,7 @@ main img {
 
 .theaters-cinemas-container {
   display: flex;
-  margin: auto;
+  margin: 1rem auto;
   gap: 1rem;
   width: 95%;
 }
@@ -122,4 +122,32 @@ main img {
 
 .info {
   width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .theaters-cinemas-container {
+    flex-direction: column;
+  }
+  .theaters,
+  .cinemas {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .info,
+  .info ul,
+  .image, .image img {
+    justify-self: center;
+    margin: 0.5rem auto;
+    width: 80%;
+  }
+
+
 }

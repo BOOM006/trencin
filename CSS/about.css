@@ -9,9 +9,9 @@
   --FOOTER-BGCOLOR: rgb(194, 186, 186);
 
   /*FONTS*/
-  --FF: "Roboto, Lato";
+  --FF: "Roboto", "Lato", sans-serif;
   --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
-  --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
+  --FS-TEXT: clamp(1rem, 1.6vw, 5rem); /*Texty - a, p*/
   --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
   --FS-H2: clamp(1.6rem, 2.3vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
@@ -63,7 +63,7 @@ li {
   color: black;
 }
 
-span {
+.bold {
   font-weight: bold;
 }
 
@@ -88,15 +88,15 @@ main img {
 
 .general-section {
   margin: auto;
-  width: 65%;
+  width: 75%;
   border-radius: 2rem;
   background-color: hsla(0, 0%, 100%, 0.8);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .general {
   display: flex;
-  justify-content: center;
+  justify-self: center;
   gap: 4rem;
 }
 
@@ -104,19 +104,12 @@ main img {
   text-align: left;
 }
 
-.history {
-  display: flex;
-  justify-self: center;
-  flex-direction: column;
-  width: 80%;
-}
-
 .symbols-section {
   margin: 1rem auto;
-  width: 65%;
+  width: 75%;
   border-radius: 2rem;
   background-color: hsla(0, 0%, 100%, 0.8);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .symbols-container {
@@ -131,12 +124,17 @@ main img {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  height: 300px;
+}
+
+.person img {
+  width: clamp(100px, 20vw, 170px);
+  height: auto;
 }
 
 .symbol img {
+  width: clamp(100px, 10vw, 170px);
+  height: auto;
   margin: auto;
-  width: 150px;
 }
 
 .audio {
@@ -150,42 +148,37 @@ main img {
 
 .persons-section {
   margin: 1rem auto;
-  width: 65%;
+  width: 75%;
   border-radius: 2rem;
   background-color: hsla(0, 0%, 100%, 0.8);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .persons-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-  margin: auto;
-  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .person {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: center;
-  height: 300px;
-  border-radius: 2rem;
 }
 
 .person img {
   margin: auto;
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 2rem;
   border: 2px solid black;
 }
 
 .partners-section {
   margin: 0 auto;
-  width: 65%;
+  width: 75%;
   border-radius: 2rem;
   background-color: hsla(0, 0%, 100%, 0.8);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .partners {
@@ -209,12 +202,165 @@ footer p {
 
 @media (max-width: 1024px) {
   .symbols-container {
-    gap: 1.5rem;
+    gap: 3rem;
+  }
+  .person img {
+    width: 130px;
+    height: 130px;
   }
 }
 
 @media (max-width: 768px) {
-  .general-section {
+  .general {
+    gap: 0;
+  }
+
+  .centered {
+    display: block;
+    padding-left: 1.3rem;
+  }
+
+  .symbols-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  span::after {
+    content: "\A"; /* nový riadok */
+    white-space: pre;
+  }
+  .persons-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .person img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .general {
+    flex-direction: column;
+  }
+  .persons-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  audio {
+    width: 100%;
+  }
+}
+
+/*
+@media (max-width: 480px) {
+  .general-section,
+  .symbols-section,
+  .persons-section,
+  .partners-section {
+    width: 85%;
+    padding: 1rem;
+  }
+
+  .general {
+    justify-self: center;
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .symbols-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0;
+  }
+  
+
+  .symbol {
+    height: auto;
+  }
+
+  .symbol img {
+    margin: 0 auto;
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  .persons-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .second {
+    padding-left: 3.3rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 860px) {
+  .section {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .general {
+    justify-self: center;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .symbols-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .symbol {
+    height: auto;
+  }
+
+  .persons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  audio {
+    width: 100%;
+  }
+}
+
+@media (min-width: 861px) and (max-width: 1030px) {
+  .general-section,
+  .symbols-section,
+  .persons-section,
+  .partners-section {
+    width: 85%;
+    padding: 1rem;
+  }
+  .symbols-container,
+  .partners {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .persons-container,
+  .symbols-container,
+  .partners {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+/*
+
+@media (max-width: 480px) {
+  .general-section,
+  .symbols-section,
+  .persons-section,
+  .partners-section {
+    width: 85%;
+    padding: 1rem;
   }
 
   .general {
@@ -236,8 +382,21 @@ footer p {
     margin: 0 auto;
   }
 
+  audio {
+    width: 100%;
+  }
+
   .persons-container {
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}*/
+
+/*
+
+@media (max-width: 1024px) {
+  .symbols-container {
+    gap: 1.5rem;
   }
 }
 
@@ -288,3 +447,4 @@ footer p {
     margin: 0 auto;
   }
 }
+*/

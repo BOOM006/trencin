@@ -124,6 +124,21 @@ main img {
 
 @media (max-width: 768px) {
   .separation-section {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .separation-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+/*
+
+@media (max-width: 768px) {
+  .separation-section {
     gap: 1rem;
   }
 }
@@ -136,3 +151,4 @@ main img {
     padding: 0;
   }
 }
+*/
