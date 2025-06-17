@@ -119,38 +119,7 @@ main img {
   margin-left: 0.5rem;
 }
 
-.kic-section,
-.hotels-section {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem auto;
-  padding: 1rem;
-  width: 80%;
-  border-radius: 2rem;
-  background-color: hsla(0, 0%, 100%, 0.8);
-}
 
-table {
-  font-size: var(--FS-TEXT);
-  margin: auto;
-}
-
-.blue,
-th,
-caption {
-  background-color: rgb(87, 151, 248);
-  border: 2px solid rgb(87, 151, 248);
-}
-
-.kic-img-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.kic-img-container img {
-  width: 350px;
-}
 
 .hotels-section {
   display: flex;
