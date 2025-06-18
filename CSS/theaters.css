@@ -68,6 +68,7 @@ span {
 
 main {
   background-color: hsla(0, 3%, 85%, 0.4);
+  padding-bottom: 0.1rem;
 }
 
 main img {
@@ -124,6 +125,17 @@ main img {
   width: 50%;
 }
 
+footer {
+  text-align: center;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+  font-size: var(--FS-TEXT-NEWS);
+}
+
 @media (max-width: 1024px) {
   .theaters-cinemas-container {
     flex-direction: column;
@@ -143,11 +155,10 @@ main img {
 
   .info,
   .info ul,
-  .image, .image img {
+  .image,
+  .image img {
     justify-self: center;
     margin: 0.5rem auto;
     width: 80%;
   }
-
-
 }

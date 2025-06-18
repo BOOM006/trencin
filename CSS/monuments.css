@@ -99,6 +99,7 @@ span {
 
 main {
   background-color: hsla(0, 3%, 85%, 0.4);
+  padding-bottom: 0.1rem;
 }
 
 main img {
@@ -139,6 +140,17 @@ main img {
   width: 40%;
 }
 
+footer {
+  text-align: center;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+  font-size: var(--FS-TEXT-NEWS);
+}
+
 @media (max-width: 768px) {
   .pamiatka {
     flex-direction: column-reverse;
@@ -151,5 +163,6 @@ main img {
   }
 
   .right img {
-width: 100%;  }
+    width: 100%;
+  }
 }

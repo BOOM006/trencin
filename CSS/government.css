@@ -100,6 +100,7 @@ span {
 
 main {
   background-color: hsla(0, 3%, 85%, 0.4);
+  padding-bottom: 0.1rem;
 }
 
 main img {
@@ -310,6 +311,17 @@ textarea {
 
 .submit-btn button {
   padding: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+  font-size: var(--FS-TEXT-NEWS);
 }
 
 @media (max-width: 1024px) {

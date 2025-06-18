@@ -47,10 +47,11 @@ h2 {
   font-size: var(--FS-H2);
   text-align: center;
   margin: 0;
-  margin-bottom: 2rem;
 }
 
 h3 {
+  margin: 0;
+  margin-bottom: 0.5rem;
   font-size: var(--FS-H3);
 }
 
@@ -59,7 +60,6 @@ a,
 li {
   font-size: var(--FS-TEXT);
   font-family: var(--FF);
-  text-decoration: none;
   color: black;
 }
 
@@ -82,45 +82,68 @@ main img {
   width: 100%;
 }
 
+.nav a {
+  text-decoration: none;
+}
+
 #no-margin {
   margin: 0;
   margin-left: 0.5rem;
 }
-
-.separation-section {
+/*
+.exhibition-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin: auto;
   width: 80%;
-  border-radius: 2rem;
-  gap: 2rem;
-  padding: 2rem;
+}
+
+
+.exhibition{
+    margin: auto;
 }
 
 .item {
-  width: 20%;
-  backdrop-filter: blur(5px);
-  /*background-color: hsla(193, 56%, 78%, 0.388);*/
-  background-color: hsla(0, 0%, 100%, 0.6);
+  display: flex;
+}
+*/
+
+.exhibition-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.exhibition {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 50%;
+  margin: 0.5rem auto;
+}
+
+.exhibition ul {
+  width: 60%;
+}
+
+.exhibition img {
+  margin: auto;
+}
+
+.exhibition h3 {
   text-align: center;
-  border-radius: 2rem;
-  padding: 2rem;
 }
 
-.item:hover {
-  transform: translateY(-5px);
-  background-color: hsla(193, 56%, 78%, 1);
-  color: white;
-  transition: all 0.3s ease;
-  border-radius: 2rem;
-}
-
-.item :hover {
-  color: white;
+.item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .item img {
-  width: 15dvw;
+  max-width: 200px;
+  border-radius: 1rem;
 }
 
 footer {
@@ -133,34 +156,3 @@ footer p {
   padding: 1rem;
   font-size: var(--FS-TEXT-NEWS);
 }
-
-@media (max-width: 768px) {
-  .separation-section {
-    gap: 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .separation-section {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-  }
-}
-/*
-
-@media (max-width: 768px) {
-  .separation-section {
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 425px) {
-  .separation-section {
-    flex-direction: column;
-    width: 95%;
-    gap: 0.5rem;
-    padding: 0;
-  }
-}
-*/

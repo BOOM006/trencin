@@ -68,6 +68,7 @@ span {
 
 main {
   background-color: hsla(0, 3%, 85%, 0.4);
+  padding-bottom: 0.1rem;
 }
 
 main img {
@@ -111,6 +112,17 @@ main img {
   margin-top: 4rem;
 }
 
+footer {
+  text-align: center;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+  font-size: var(--FS-TEXT-NEWS);
+}
+
 @media (max-width: 1024px) {
   .item {
     gap: 1rem;
@@ -136,7 +148,7 @@ main img {
     padding: 0;
     width: 90%;
   }
-  .image img{
+  .image img {
     margin: auto;
     width: 150px;
   }

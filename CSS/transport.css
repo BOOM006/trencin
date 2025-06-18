@@ -12,11 +12,9 @@
   --FF: "Roboto, Lato";
   --FS-TEXT-NAV: clamp(2rem, 1.8vw, 5rem); /*Texty - a, p*/
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
-  --FS-TEXT-TABLE: clamp(1rem, 2vw, 6rem); /*Texty - a, p*/
   --FS-H1: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h1*/
   --FS-H2: clamp(1.6rem, 2.3vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
-  --FS-H4: clamp(1.3rem, 2vw, 5rem); /*Nadpis h4*/
 }
 
 header {
@@ -33,7 +31,7 @@ header img {
 
 body {
   margin: 0;
-  background-image: url(/obrazky/samospráva-bcg.jpg);
+  background-image: url(/obrazky/about-bcg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -42,58 +40,27 @@ h1 {
   font-size: var(--FS-H1);
   text-align: center;
   margin: 0;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 h2 {
   font-size: var(--FS-H2);
   text-align: center;
   margin: 0;
-  margin-top: 1rem;
 }
 
 h3 {
-  font-size: var(--FS-H3);
   margin: 0;
-}
-
-h4 {
-  font-size: var(--FS-H4);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--FS-H3);
 }
 
 p,
 a,
-li,
-input,
-label {
+li {
   font-size: var(--FS-TEXT);
   font-family: var(--FF);
-  text-decoration: none;
   color: black;
-}
-
-ul {
-  margin-bottom: 1rem;
-}
-
-textarea {
-  font-size: var(--FS-TEXT);
-  margin: auto;
-  width: 80%;
-  resize: none;
-}
-
-button {
-  display: flex;
-  justify-self: center;
-  font-size: var(--FS-TEXT);
-  cursor: pointer;
-  background-color: rgb(87, 151, 248);
-  border-radius: 2rem;
-  border: none;
-  margin-top: 1rem;
 }
 
 span {
@@ -102,6 +69,7 @@ span {
 
 main {
   background-color: hsla(0, 3%, 85%, 0.4);
+  padding-bottom: 0.1rem;
 }
 
 main img {
@@ -114,36 +82,66 @@ main img {
   width: 100%;
 }
 
+.nav a {
+  text-decoration: none;
+}
+
 #no-margin {
   margin: 0;
   margin-left: 0.5rem;
 }
 
-
-
-.hotels-section {
-  display: flex;
-  flex-direction: column;
+.public-transport-section,
+.railway-transport-section,
+.parking-section {
+  width: 80%;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-radius: 2rem;
 }
 
-.hotel {
+.public-transport-container,
+.railway-transport-container,
+.parking-container {
   display: flex;
-  justify-content: space-around;
 }
 
-.room-info,
-.hotel-info {
-  margin-top: 5rem;
+.item {
   width: 33%;
+  gap: 2rem;
 }
 
-.hotel img {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  border-radius: 1rem;
+.item img {
+  max-width: 250px;
 }
 
-.hidden {
-  display: none;
+table {
+  font-size: var(--FS-TEXT);
+  margin: auto;
+}
+
+.blue,
+th,
+caption {
+  background-color: rgb(87, 151, 248);
+  border: 2px solid rgb(87, 151, 248);
+}
+
+.app {
+  padding: 0.5rem;
+  background-color: hsla(0, 100%, 50%, 0.2);
+  border-radius: 2rem;
+}
+
+footer {
+  text-align: center;
+  background-color: hsla(0, 3%, 85%, 0.4);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+  font-size: var(--FS-TEXT-NEWS);
 }
