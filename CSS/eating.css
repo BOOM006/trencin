@@ -109,8 +109,31 @@ main img {
   display: flex;
 }
 
+.text-and-table {
+  display: contents;
+}
+
 .item {
   width: 33%;
+}
+
+table {
+  font-size: var(--FS-TEXT);
+  margin: auto;
+}
+
+.blue,
+th,
+caption {
+  background-color: rgb(87, 151, 248);
+  border: 2px solid rgb(87, 151, 248);
+}
+
+.item img {
+  max-width: 250px;
+  display: flex;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
 }
 
 footer {
@@ -122,4 +145,71 @@ footer p {
   margin: 0;
   padding: 1rem;
   font-size: var(--FS-TEXT-NEWS);
+}
+
+@media (max-width: 768px) {
+  h3 {
+    margin-bottom: 0;
+  }
+  .item-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-and-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Ak by bol problém s miestom */
+  }
+
+  .text-and-table .item {
+    width: auto;
+  }
+
+  /* Obrázok ide pod text a tabuľku */
+  .item-container > .item:last-child {
+    width: 80%; /* Alebo 100%, podľa dizajnu */
+  }
+
+  .item-container > .item:first-child {
+    width: 80%;
+  }
+
+  .item img {
+    width: 250px;
+  }
+  /*
+  .item-container {
+    flex-direction: column;
+  }
+  .item {
+    width: 100%;
+    justify-items: center;
+  }
+
+  .item img {
+    width: 230px;
+    display: flex;
+  }
+
+  .item-container:nth-child(1) {
+    order: 1;
+  }*/
+}
+
+@media (max-width: 425px) {
+  .item-container > .item:last-child {
+    width: 100%;
+  }
+
+  .item-container > .item:first-child {
+    width: 100%;
+  }
+  .item img {
+    width: 200px;
+  }
 }
