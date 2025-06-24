@@ -239,7 +239,11 @@ footer p {
 }
 @media (max-width: 480px) {
   table {
-    width: 100%;
+    width: 80%;
+  }
+
+  .kic-section {
+    width: 90%;
   }
 
   .separation-section {
